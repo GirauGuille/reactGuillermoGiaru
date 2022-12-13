@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container-fuid">
       <NavBar />
-      <ItemListContainer greeting={"No se encontraron Productos!"} />
+      <ItemListContainer />
       <Footer />
     </div>
   );
