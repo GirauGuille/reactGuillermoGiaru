@@ -17,14 +17,14 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-            <div className="container-fuid">
-                <div className="d-flex justify-content-center">
-                    <img src="images/marca glg chico verde.svg" alt="logo Girau" width={80}/>
+                <div className="container-fuid">
+                    <div className="d-flex justify-content-center">
+                        <img src="images/marca glg chico verde.svg" alt="logo Girau" width={80}/>
+                    </div>
+                    <div className="d-flex justify-content-center">
+                        <p>Esta app fue creada por Guillermo Girau.</p>
+                    </div>
                 </div>
-                <div className="d-flex justify-content-center">
-                    <p>Esta app fue creada por Guillermo Girau.</p>
-                </div>
-            </div>
             </div>
         </div>
     )
