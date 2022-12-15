@@ -1,9 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import { useEffect } from "react";
+
 
 const ItemCount = ({stockItems}) => {
     const [counter, setCounter] = useState(1);
     const [stock, setStock] = useState(stockItems)
+
+    useEffect(()=>{
+        setStock(stockItems)
+    },[stockItems])
 
     const incrementarStock = () => {
         if (counter < stock) {
@@ -25,8 +31,8 @@ const ItemCount = ({stockItems}) => {
 
     return (
         <div className="container">
-            <div className="row mb-3">
-                <div className="col-md-2">
+            <div className="row mb-3 d-flex justify-content-center">
+                <div className="col-md-2 d-flex justify-content-center">
                     <div className="btn-group" role="group" aria-label="Basic outlined example">
                         <button type="button" className="btn btn-outline-primary" onClick={decrementarStock}>-</button>
                         <button type="button" className="btn btn-outline-primary">{counter}</button>
@@ -34,14 +40,10 @@ const ItemCount = ({stockItems}) => {
                     </div>
                 </div>
             </div>
-            <div className="row">
-
-            </div>
-            <div className="col-md-2">
-                <button className="btn btn-outline-primary"onClick={onAdd}>Agregar al carrito</button>
+            <div className="row-md-2 mt-2">
+                <button className="btn btn-outline-primary " onClick={onAdd}> <b>Agregar al carrito</b> </button>
             </div>
         </div>
-
     )
 }
 

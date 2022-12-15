@@ -21,6 +21,7 @@ const NavBar = () => {
                                 Autos
                             </NavLink>
                                 <ul className="dropdown-menu">
+                                    <li><NavLink className="dropdown-item" to={"/"}>Todos</NavLink></li>
                                     <li><NavLink className="dropdown-item" to={"/category/Ford"}>Ford</NavLink></li>
                                     <li><NavLink className="dropdown-item" to={"/category/Renoult"}>Renoult</NavLink></li>
                                     <li><NavLink className="dropdown-item" to={"/category/Citroen"}>Citroen</NavLink></li>
