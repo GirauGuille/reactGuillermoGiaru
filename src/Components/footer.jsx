@@ -18,8 +18,8 @@ const Footer = () => {
                     </div>
                     <div className="col-md-4 text-end">
                         <p>
-                            <a href={"https://www.facebook.com/girauguillermo/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"images/SM-RRSS-04.png"} alt="Facebook" width={24} /></a>
-                            <a href={"https://www.instagram.com/girauguille/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"images/SM-RRSS-03.png"} alt="Instagram" width={24} /></a>
+                            <a href={"https://www.facebook.com/girauguillermo/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"images/SM-RRSS-04.png"} alt="Facebook Girau" width={24} /></a>
+                            <a href={"https://www.instagram.com/girauguille/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"images/SM-RRSS-03.png"} alt="Instagram Girau" width={24} /></a>
                         </p>
                     </div>
                 </div>
