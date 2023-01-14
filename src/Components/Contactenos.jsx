@@ -2,8 +2,8 @@ import React from "react";
 
 const Contactenos = () => {
     return (
-        <div>
-            <img src="images/Contactenos.jpeg" alt="contactenos"/>
+        <div className="container">
+            <img src="images/contactenos.jpg" className="img-fluid w-100" alt="contactenos"/>
         </div>
     )
 }

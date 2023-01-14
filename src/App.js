@@ -1,29 +1,38 @@
 import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import NavBar from './Components/NavBar';
-import ItemListContainer from './Components/ItemListContainer';
-import ItemDetailContainer from "./Components/ItemDetailContainer";
-import Footer from './Components/footer';
-import Error404 from "./Components/Error404";
-import Home from "./Components/Home";
-import Contactenos from "./Components/Contactenos";
+import Footer from "./components/Footer";
+import ItemListContainer from "./components/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import NavBar from "./components/NavBar";
+import Error404 from "./components/Error404";
+import Contactenos from "./components/Contactenos";
+import Home from "./components/Home";
+import CartContextProvider from "./components/context/CartContext";
+import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
+import Finish from "./components/Finish";
 
 function App() {
   return (
-    <div className="container-fuid">
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path={"/"} element={<ItemListContainer />} />
-          <Route path={"/category/:id"} element={<ItemListContainer />} />
-          <Route path={"/item/:id"} element={<ItemDetailContainer />} />
-          <Route path={"*"} element={<Error404 />} />
-          <Route path={"/Home"} element={<Home/>} />
-          <Route path={"/Contactenos"} element={<Contactenos/>} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <CartContextProvider>
+      <div>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path={"/"} element={<ItemListContainer />} />
+            <Route path={"/category/:id"} element={<ItemListContainer />} />
+            <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+            <Route path={"/cart"} element={<Cart />} />
+            <Route path={"/checkout"} element={<Checkout />} />
+            <Route path={"/finish/:id"} element={<Finish />} />
+            <Route path={"*"} element={<Error404 />} />
+            <Route path={"/Home"} element={<Home/>} />
+            <Route path={"/Contactenos"} element={<Contactenos/>} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </CartContextProvider>
   );
 }
 

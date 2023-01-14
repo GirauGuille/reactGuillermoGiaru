@@ -1,5 +1,5 @@
 [
-    {"id":1, 
+    {"identificador":1, 
     "nombre":"Argo", 
     "descripcion":"",
     "modelo": "2022",
@@ -9,7 +9,7 @@
     "stock":5, 
     "categoria":"Fiat"},
 
-    {"id":2, 
+    {"identificador":2, 
     "nombre":"Ranger", 
     "descripcion":"",
     "modelo": "2022",
@@ -19,7 +19,7 @@
     "stock":10, 
     "categoria":"Ford"},
 
-    {"id":3, 
+    {"identificador":3, 
     "nombre":"C3", 
     "descripcion":"",
     "modelo": "2003",
@@ -29,7 +29,7 @@
     "stock":1, 
     "categoria":"Citroen"},
     
-    {"id":4, 
+    {"identificador":4, 
     "nombre":"Serie 1", 
     "descripcion":"", 
     "modelo": "2018",
@@ -39,7 +39,7 @@
     "stock":1, 
     "categoria":"Bmw"},
     
-    {"id":5, 
+    {"identificador":5, 
     "nombre":"Mustang", 
     "descripcion":"", 
     "imagen":"https://http2.mlstatic.com/D_NQ_NP_2X_993903-MLA51954941462_102022-F.webp", 
@@ -47,7 +47,7 @@
     "stock":1, 
     "categoria":"Ford"},
     
-    {"id":6, 
+    {"identificador":6, 
     "nombre":"Cruze", 
     "descripcion":"", 
     "modelo": "2005",
@@ -57,7 +57,7 @@
     "stock":2, 
     "categoria":"Chevrolet"},
 
-    {"id":7, 
+    {"identificador":7, 
     "nombre":"Cronos",
     "descripcion":"",
     "modelo": "2023",
@@ -67,7 +67,7 @@
     "stock":8, 
     "categoria":"Fiat"},
 
-    {"id":8, 
+    {"identificador":8, 
     "nombre":"Corola", 
     "descripcion":"", 
     "imagen":"https://http2.mlstatic.com/D_NQ_NP_2X_774302-MLA51676616807_092022-F.webp", 
@@ -77,7 +77,7 @@
     "stock":4, 
     "categoria":"Toyota"},
 
-    {"id":9, 
+    {"identificador":9, 
     "nombre":"Sentra", 
     "descripcion":"", 
     "modelo": "2022",

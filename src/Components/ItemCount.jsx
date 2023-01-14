@@ -1,38 +1,38 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-
-const ItemCount = ({stockItems}) => {
+const ItemCount = ({stock, onAdd}) => {
     const [counter, setCounter] = useState(1);
-    const [stock, setStock] = useState(stockItems)
-
-    useEffect(()=>{
-        setStock(stockItems)
-    },[stockItems])
+    const [itemStock, setItemStock] = useState(stock);
+    const [vendido, setVendido] = useState(false);
 
     const incrementarStock = () => {
-        if (counter < stock) {
-            setCounter (counter +1)
-        }
-    }
-    const decrementarStock = () => {
-        if (counter >1){
-            setCounter (counter -1)
-        }
-    }
-    const onAdd = () => {
-        if (counter <= stock) {
-            setStock(stock - counter);
-            setCounter(1);
-            console.log("Agregaste: " + counter + " Productos al Carrito!");
+        if (counter < itemStock) {
+            setCounter(counter + 1);
         }
     }
 
+    const decrementarStock = () => {
+        if (counter > 1) {
+            setCounter(counter - 1);
+        }
+    }
+
+    const addToCart = (quantity) => {
+        setItemStock(itemStock - quantity);
+        setCounter(1);
+        setVendido(true);
+        onAdd(quantity);
+    }
+
+    useEffect(() => {
+        setItemStock(stock);
+    }, [stock])
+
     return (
-        <div className="container">
-            <div className="row mb-3 d-flex justify-content-center">
-                <div className="col-md-2 d-flex justify-content-center">
+        <div className="container text-center">
+            <div className="row mb-3">
+                <div className="col-md-12">
                     <div className="btn-group" role="group" aria-label="Basic outlined example">
                         <button type="button" className="btn btn-outline-primary" onClick={decrementarStock}>-</button>
                         <button type="button" className="btn btn-outline-primary">{counter}</button>
@@ -40,24 +40,13 @@ const ItemCount = ({stockItems}) => {
                     </div>
                 </div>
             </div>
-            <div className="row-md-2 mt-2">
-                <button className="btn btn-outline-primary " onClick={onAdd}> <b>Agregar al carrito</b> </button>
+            <div className="row">
+                <div className="col-md-12">
+                    {vendido ? <Link to={"/cart"} className="btn btn-outline-primary">Terminar Mi Compra</Link> : <button className="btn btn-outline-primary" onClick={() => {addToCart(counter)}}>Agregar al Carrito</button>}
+                </div>
             </div>
         </div>
     )
 }
 
 export default ItemCount;
-
-/*     return (
-        <div className="container py-5">
-            <div className="row">
-                <div className="col-md-12 text-center">
-                    <div className="alert bg-danger" role="alert">
-                        <p>{greeting}</p>
-                    </div>
-                    <ItemCount stockItems={10} />
-                </div>
-            </div>
-        </div>
-    ) */
